@@ -193,7 +193,7 @@ This ordering minimizes I/O: the cheapest checks run first, and expensive operat
 `MEMORY.md` is **always** loaded into the system prompt at session start.
 
 - Injected via `loadMemoryPrompt()` in `memdir/memdir.ts`.
-- Hard limits: **200 lines** OR **~25 KB** — whichever is hit first.
+- Hard limits: **200 lines** AND **~25 KB** — both caps are enforced sequentially (line cap first, then byte cap if still large).
 - If truncated, a warning is appended naming which cap fired and by how much.
 - Line truncation happens first (natural boundary), then byte truncation at the last newline before the cap.
 
