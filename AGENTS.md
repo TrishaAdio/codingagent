@@ -2,6 +2,8 @@
 
 ## Build and Test
 
+执行前加载环境变量.env
+
 ```bash
 npm install --legacy-peer-deps   # install dependencies
 bun run typecheck                # TypeScript type checking (bun x tsc --noEmit)
