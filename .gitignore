@@ -1,7 +1,39 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
 *.tsbuildinfo
+
+# Environment & secrets
 .env
-.env.local
+.env.*
+!.env.example
+
+# Claude Code local settings
+.claude/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Bun
 bun.lockb
+
+# npm (project uses bun)
 package-lock.json
+
+# Archives
+*.tgz
+*.tar.gz
